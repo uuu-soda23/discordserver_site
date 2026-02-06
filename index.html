@@ -58,21 +58,65 @@
         .step { border-left: 5px solid #007bff; }
         .rule { border-left: 5px solid #ff2e2e; }
 
-        .btn, .nobtn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            margin-top: 20px;
-            text-align: center;
-            border-radius: 5px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
+        .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #007bff, rgb(0, 115, 255));
+      color: rgb(255, 255, 255);
+      padding: 1rem 2.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.15rem;
+      box-shadow: 0 10px 30px -10px #6663ff;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
 
-        .btn { background: #007bff; color: #fff; }
-        .btn:hover { background: #0056b3; }
-        .nobtn { background: #4e4e4e; color: #fff; }
+        .disbtn {
+      display: inline-block;
+      background: linear-gradient(90deg, #25e100, rgb(0, 200, 7));
+      color: rgb(255, 255, 255);
+      padding: 1rem 2.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.15rem;
+      box-shadow: 0 10px 30px -10px #008e18;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nobtn {
+      display: inline-block;
+      background: linear-gradient(90deg, #434343, rgb(95, 95, 95));
+      color: rgb(255, 255, 255);
+      padding: 1rem 2.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.15rem;
+      box-shadow: 0 10px 30px -10px #2e2e2e;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -10px #1e40af80;
+      background: linear-gradient(90deg, #50a4ff, #53a0ff);
+    }
+           .nobtn:hover {
+      box-shadow: 0 20px 40px -10px #1a1a1a80;
+      background: linear-gradient(90deg, #393939, #282828);
+    }
+        .disbtn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -10px #1eaf3180;
+      background: linear-gradient(90deg, #40ff39, #5cff43);
+    }
 
         @media (max-width: 768px) {
             .container { padding: 15px; }
@@ -171,6 +215,9 @@
         </div>
     </div>
 
+        <button class="nobtn">ホーム</button>
+    <button class="btn" onclick="window.location.href='https://uuu-soda23.github.io/discordserver_adm1n/'">運営一覧</button>
+    <button class="btn" onclick="window.location.href='https://uuu-soda23.github.io/discordserver_sitekousin/'">サイト更新情報</button>
     <div class="container">
         <h1>"絵文字雑談サーバー"へ参加しよう！</h1>
         <div class="step">
@@ -179,8 +226,6 @@
     <img id="server-img" src="https://github.com/uuu-soda23/discordserver_site/blob/main/%E7%84%A1%E9%A1%8C18_20260201113423.png?raw=true" alt="サーバー画像">
 
 </div>
-
-
         <div class="rule">
             <h2>サーバーを利用する前に</h2>
             <p>必ず以下のルールを読んでからご参加ください。</p>
@@ -193,35 +238,9 @@
             <h2>参加して直ぐに脱退する行為</h2>
             <p>参加してすぐにサーバーを脱退する様な行為はお辞めください。何度も繰り返すと永久にBANになる可能性があります。</p>
             <p>ここまで読んで理解できた方は以下のボタンを押して参加してください。</p>
+                    <button class="disbtn" onclick="window.location.href='https://discord.gg/NTzybmQzB3'">Discordサーバーに参加</button>
         </div>
-
-        <button class="btn" onclick="window.location.href='https://discord.gg/NTzybmQzB3'">Discordサーバーに参加</button>
-        <button class="nobtn">ホーム</button>
-        <button class="btn" onclick="window.location.href='https://uuu-soda23.github.io/discordserver_adm1n/'">運営一覧</button>
-        <button class="btn" onclick="window.location.href='https://uuu-soda23.github.io/discordserver_sitekousin/'">サイト更新情報</button>
     </div>
-
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        const lightButton = document.querySelector('.menu .light');
-        const darkButton = document.querySelector('.menu .dark');
-
-        // メニュー開閉
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('open');
-        });
-
-        // ライトモード
-        lightButton.addEventListener('click', () => {
-            document.body.classList.add('light-mode');
-        });
-
-        // ダークモード
-        darkButton.addEventListener('click', () => {
-            document.body.classList.remove('light-mode');
-        });
-    </script>
 <script src="index.js"></script>
 
 </body>
